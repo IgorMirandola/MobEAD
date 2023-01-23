@@ -55,7 +55,7 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-       artifactName: # 'drop'
+       artifactName: myatifact # 'drop'
 
 - task: Docker@2
   inputs:
