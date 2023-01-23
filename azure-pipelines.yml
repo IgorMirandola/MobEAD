@@ -47,12 +47,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-#- task: SonarQubeAnalyze@4
-
-#- task: SonarQubePublish@4
-#  inputs:
-#    pollingTimeoutSec: '300'
-
 - task: PublishPipelineArtifact@1
   inputs:
        artifactName: myatifact # 'drop'
