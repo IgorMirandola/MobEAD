@@ -70,5 +70,9 @@ steps:
   inputs:
        artifactName: # 'drop'
 
- 
+ - task: Docker@2
+   inputs:
+     repository: 'igormirandola/myrepo:azure'
+     command: 'buildAndPush'
+     Dockerfile: '**/Dockerfile'
 
