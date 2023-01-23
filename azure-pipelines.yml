@@ -54,4 +54,5 @@ steps:
 - task: Docker@2
   inputs:
     repository: 'igormirandola/myrepo'
-    command: 'push'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
