@@ -69,3 +69,8 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
        artifactName: # 'drop'
+
+- task: Docker@2
+  inputs:
+    repository: 'igormirandola/myrepo'
+    command: 'push'
