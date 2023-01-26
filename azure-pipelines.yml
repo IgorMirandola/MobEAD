@@ -56,3 +56,13 @@ steps:
     repository: 'igormirandola/myrepo'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'Avaliação Gratuita(417729c6-8cf8-4672-8dac-9340785f25ff)'
+    backendAzureRmResourceGroupName: 'my_resource_group'
+    backendAzureRmStorageAccountName: 'igormirandolaaccount'
+    backendAzureRmContainerName: 'myregcont.azurecr.io/hello-world'
+    backendAzureRmKey: 'tf/terraform.tfstate'
